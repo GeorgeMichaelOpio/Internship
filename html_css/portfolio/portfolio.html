@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">George Michael Opio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about" class="container my-5">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="/img/profile.jpg" class="card-img rounded-circle" alt="Profile Picture" style="height: 400px; width: 400px;">
+            </div>
+            <div class="col-md-6">
+                <h2>About Me</h2>
+                <p>A passionate and driven software engineering student. With a keen interest in solving real-world problems through technology, I am constantly honing my skills and expanding my knowledge in various domains of software development.</p>
+                <h2>Skills and Expertise</h2>
+                <p><b>Programming Languages:</b> Proficient in Python</p>
+                <p><b>Web Development:</b> Experienced in building responsive and dynamic websites using HTML, CSS, React, and Node.js.</p>
+                <p><b>Software Development:</b> Strong foundation in software engineering principles, object-oriented programming, and version control with Git.</p>
+                <p><b>Database Management:</b> Knowledgeable in SQL, MySQL, and NoSQL databases like MongoDB.</p>
+                <p><b>Problem Solving:</b> Adept at algorithm design, data structures, and competitive programming.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="container my-5">
+        <h2 class="text-center">Projects</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/img/img2.png" class="card-img-top" alt="Project 1">
+                    <div class="card-body">
+                        <h5 class="card-title">School Management System</h5>
+                        <p class="card-text">A school management system is a comprehensive software solution designed to automate and streamline the administrative and academic processes of educational institutions. It facilitates tasks such as student enrollment, attendance tracking, grade management, timetable scheduling, and communication between teachers, students, and parents. By integrating various functions into a single platform, it enhances efficiency, reduces paperwork, and improves overall coordination within the school.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/img/img3.jpeg" class="card-img-top" alt="Project 2" >
+                    <div class="card-body">
+                        <h5 class="card-title"> E-Commerce System</h5>
+                        <p class="card-text">An e-commerce system is a digital platform that allows businesses and consumers to buy and sell goods and services online. It includes features like product listings, shopping carts, secure payment processing, order management, and customer support. The system enables users to browse products, make purchases, and track orders from any internet-connected device. It also provides tools for inventory management, marketing, and data analytics to help businesses optimize their operations and improve customer experiences.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/img/img4.png" class="card-img-top" alt="Project 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Chat System</h5>
+                        <p class="card-text">A chat system is a digital platform that enables real-time text-based communication between users. It can be used for one-on-one conversations or group discussions. Key features often include user authentication, message notifications, chat history, and multimedia sharing capabilities. Chat systems can be integrated into websites, mobile apps, and desktop applications, facilitating seamless interaction for personal, professional, or customer service purposes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container my-5">
+        <h2 class="text-center">Contact</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" id="message" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p>&copy; 2024 George Michael Opio. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/opiogeorgemichael/" target="_blank" class="text-white mx-2">LinkedIn</a>
+                <a href="https://github.com/GeorgeMichaelOpio" target="_blank" class="text-white mx-2">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
