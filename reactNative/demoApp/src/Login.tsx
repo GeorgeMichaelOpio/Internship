@@ -1,26 +1,21 @@
-import {
-  Alert,
-  Image,
-  StyleSheet,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  View,
-} from 'react-native';
-import React, {useState} from 'react';
-import {usernameValidation} from './utilityFunctions/validation/usernameValidation';
-import {passwordValidation} from './utilityFunctions/validation/passwordValidation';
+import React, { useState } from 'react';
+import { Alert, Image, StyleSheet, Text, TextInput, TouchableOpacity, View, Modal } from 'react-native';
+import { usernameValidation } from './utilityFunctions/validation/usernameValidation';
+import { passwordValidation } from './utilityFunctions/validation/passwordValidation';
 
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [showAlert, setShowAlert] = useState(false);
+  const [alertMessage, setAlertMessage] = useState('');
 
   const handleLogin = () => {
-    if(usernameValidation(username)) {
-      
-    }
-    if(passwordValidation(password)) {
-      
+    if (usernameValidation(username) && passwordValidation(password)) {
+      // Perform login logic
+      console.log('Logging in...');
+    } else {
+      setAlertMessage('Invalid username or password.');
+      setShowAlert(true);
     }
 
     const login_details = {
@@ -30,7 +25,11 @@ const Login = () => {
 
     console.log(login_details);
   };
-  
+
+  const closeAlert = () => {
+    setShowAlert(false);
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.loginWrapper}>
@@ -58,11 +57,26 @@ const Login = () => {
           <Text style={styles.buttonText}>Sign In</Text>
         </TouchableOpacity>
       </View>
+
+      {/* Custom Alert Modal */}
+      <Modal
+        animationType="fade"
+        transparent={true}
+        visible={showAlert}
+        onRequestClose={closeAlert}
+      >
+        <View style={styles.centeredView}>
+          <View style={styles.modalView}>
+            <Text style={styles.modalText}>{alertMessage}</Text>
+            <TouchableOpacity style={styles.modalButton} onPress={closeAlert}>
+              <Text style={styles.buttonText}>Close</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+      </Modal>
     </View>
   );
 };
-
-export default Login;
 
 const styles = StyleSheet.create({
   container: {
@@ -138,4 +152,31 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
   },
+  centeredView: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+  },
+  modalView: {
+    backgroundColor: '#fff',
+    borderRadius: 20,
+    padding: 20,
+    alignItems: 'center',
+    elevation: 5,
+  },
+  modalText: {
+    fontSize: 18,
+    marginBottom: 15,
+    textAlign: 'center',
+  },
+  modalButton: {
+    marginTop: 10,
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    backgroundColor: '#6A82FB',
+    borderRadius: 15,
+  },
 });
+
+export default Login;
