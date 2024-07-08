@@ -1,16 +1,19 @@
-import React from 'react';
-import {Text, View} from 'react-native';
+import {View, Text} from 'react-native';
 
-const RegisterApp = () => {
+export const Register = () => {
   return (
-    <View
-      style={{
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}>
-      <Text>Register Screen</Text>
+    <View>
+      <Text>Register screen</Text>
     </View>
   );
 };
 
-export default RegisterApp;
+const Setting = () => {
+  return (
+    <View>
+      <Text>Settings</Text>
+    </View>
+  );
+};
+
+export default Setting;

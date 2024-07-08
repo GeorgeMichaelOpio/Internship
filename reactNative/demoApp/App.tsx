@@ -1,20 +1,58 @@
-import React from 'react';
-import {Text, View} from 'react-native';
-import Home from './src/Home';
-import Settings from './src/Settings';
+import {
+  Button,
+  Image,
+  NativeSyntheticEvent,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TextInput,
+  TextInputChangeEventData,
+  TouchableOpacity,
+  View,
+} from 'react-native';
+import React, {useState} from 'react';
 import Login from './src/Login';
-import Register from './src/Register';
 
 const App = () => {
-  return (
-  <View>
-    <Text>Welcome to the App!</Text>
-    <Home />
-    <Settings />
-    <Login />
-    <Register />
-  </View>
-  );
+  return <Login />;
 };
+
+const styles = StyleSheet.create({
+  screen_wrapper: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#aaa',
+    height: '100%',
+  },
+
+  text: {
+    color: 'white',
+    fontSize: 18,
+  },
+
+  image: {
+    width: 200,
+    height: 200,
+    objectFit: 'cover',
+  },
+
+  input: {
+    borderColor: 'gray',
+    borderWidth: 1,
+    borderRadius: 10,
+  },
+
+  button: {
+    backgroundColor: 'teal',
+    width: '50%',
+    padding: 10,
+  },
+
+  button_text: {
+    fontSize: 16,
+    fontWeight: '500',
+    color: 'white',
+  },
+});
 
 export default App;
